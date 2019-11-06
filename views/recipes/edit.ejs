@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
+        <link rel="stylesheet" href="/app.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <meta charset="utf-8">
         <title>Edit Recipe Page</title>
     </head>
     <body>
         <h1>Edit Recipe Page</h1>
+        <form action="/recipes/<%=recipe.id%>?_method=PUT" method="post">
+            Recipe Name: <input type="text" name="name" value="<%=recipe.name%>"><br>
+            Entry: <input type="text" name="entry" value="<%=recipe.entry%>"><br>
+            <input type="submit" value="Edit Recipe">
+        </form>
+        <a href="/recipes">Back to Recipes</a>
     </body>
 </html>

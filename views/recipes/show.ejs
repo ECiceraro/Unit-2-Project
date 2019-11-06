@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
+        <link rel="stylesheet" href="/app.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <meta charset="utf-8">
         <title>Recipe Show Page</title>
     </head>
     <body>
-        <h1>Recipe Show Page</h1>
+        <h1>Recipe Show Page</h1><br>
+        Recipe Name: <%=recipe.name%><br>
+        Entry: <%=recipe.entry%><br>
+        <form action="/recipes/<%=recipe.id%>?_method=DELETE" method="post">
+            <input type="submit" value="Delete Recipe">
+        </form>
+        <a href="/recipes/<%=recipe.id%>/edit">Edit Recipe</a><br>
+        <a href="/recipes">Back to Recipes</a>
     </body>
 </html>
