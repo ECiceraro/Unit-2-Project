@@ -6,6 +6,11 @@ const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const app = express();
 const db = mongoose.connection;
+const bcrypt   = require('bcrypt');
+const session = require('express-session');
+const recipesController = require('./controllers/recipes.js');
+const sessionsController = require('./controllers/sessions.js');
+const usersController = require('./controllers/users.js');
 require('dotenv').config();
 
 //_______________________
@@ -40,10 +45,21 @@ app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 
 //_______________________
+//Controllers
+//_______________________
+// Allows us to use the recipes controller file(recipes.js) for routing
+app.use('/recipes', recipesController)
+// Allows us to use the sessions controller file(sessions.js) for routing
+// app.use('/sessions', sessionsController)
+// Allows us to use the users controller file(users.js) for routing
+// app.use('/users', usersController)
+
+//_______________________
 //Routes
 //_______________________
+// Home Page
 app.get('/', (req,res) => {
-    res.send('Hello World!')
+    res.render('home.ejs');
 })
 
 //_______________________
