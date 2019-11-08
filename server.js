@@ -1,16 +1,16 @@
 //_______________________
 //Dependencies
 //_______________________
-const express = require('express');
-const methodOverride = require('method-override');
-const mongoose = require('mongoose');
-const app = express();
-const db = mongoose.connection;
-const bcrypt   = require('bcrypt');
-const session = require('express-session');
-const recipesController = require('./controllers/recipes.js');
+const express            = require('express');
+const methodOverride     = require('method-override');
+const mongoose           = require('mongoose');
+const app                = express();
+const db                 = mongoose.connection;
+const bcrypt             = require('bcrypt');
+const session            = require('express-session');
+const recipesController  = require('./controllers/recipes.js');
 const sessionsController = require('./controllers/sessions.js');
-const usersController = require('./controllers/users.js');
+const usersController    = require('./controllers/users.js');
 require('dotenv').config();
 
 //_______________________
@@ -52,7 +52,11 @@ app.use('/recipes', recipesController)
 // Allows us to use the sessions controller file(sessions.js) for routing
 // app.use('/sessions', sessionsController)
 // Allows us to use the users controller file(users.js) for routing
-// app.use('/users', usersController)
+app.use('/users', usersController)
+
+
+
+
 
 //_______________________
 //Routes
