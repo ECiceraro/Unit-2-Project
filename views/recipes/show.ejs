@@ -5,6 +5,7 @@
         <title>Recipe Show Page</title>
     </head>
     <body>
+        <% include ../partials/nav.ejs %>
         <h1>Recipe Show Page</h1><br>
         Recipe Name: <%=recipe.name%><br>
         Entry: <%=recipe.entry%><br>
@@ -13,5 +14,6 @@
         </form>
         <a href="/recipes/<%=recipe.id%>/edit">Edit Recipe</a><br>
         <a href="/recipes">Back to Recipes</a>
+        <% include ../partials/footer.ejs %>
     </body>
 </html>

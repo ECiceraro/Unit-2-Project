@@ -1,0 +1,33 @@
+
+<nav class="navbar sticky-top navbar-expand-lg nav-pills justify-content-start container-fluid" id="navbar">
+        <div class="nav-item">
+            <a href="/recipes"><img src="/images/logo.svg" alt="logo"></a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" id="navLinks" href="#">Your Recipes</a>
+        </div>
+        <div class="nav-item mr-auto">
+            <a class="nav-link" id="navLinks" href="/recipes/new">Create Recipe</a>
+        </div>
+        <% if(username){ %>
+        <div class="nav-item" id="navName">
+            <a href="#" id="navLinks">Welcome <%=username%>!</a>
+        </div>
+        <%}%>
+        <% if(username){ %>
+        <div class="nav-item">
+            <form action="/sessions/end" method="POST">
+            <button class="btn btn-success"type="submit">Log Out</button>
+        </form>
+        </div>
+        <%} else{%>
+        <div class="nav-item">
+            <a class="nav-link" id="navLinks" href="/sessions/new">Log In</a>
+        </div>
+        <%}%>
+        <% if(username){}else{%>
+        <div class="nav-item">
+            <a class="btn btn-success" role="button" href="/users/new">Sign Up</a>
+        </div>
+        <%}%>
+</nav>

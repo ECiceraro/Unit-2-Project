@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-    <% include ./partials/head.ejs %>
+        <% include ./partials/head.ejs %>
     <title>Home Page</title>
     </head>
     <body>
-        <h1>Home Page</h1>
-        <a href="#">Log In</a><br>
-        <a href="/users/new">Create New User</a>
+        <% include ./partials/nav.ejs %>
+        <div class="container-fluid d-flex justify-content-start align-items-center" id="heroImg">
+            <div>
+                <h1 id="heroText">The<br>CookBuk<br>App</h1>
+            </div>
+        </div>
+        <% include ./partials/footer.ejs %>
     </body>
 </html>

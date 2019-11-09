@@ -44,13 +44,20 @@ app.use(express.urlencoded({extended: true}))
 // be able to use delet and put routes
 app.use(methodOverride('_method'))
 
+// Allows us to use the sessions body
+app.use(session({
+    secret:'feedmeseymour',
+    resave:false,
+    saveUninitialized:false
+}))
+
 //_______________________
 //Controllers
 //_______________________
 // Allows us to use the recipes controller file(recipes.js) for routing
 app.use('/recipes', recipesController)
 // Allows us to use the sessions controller file(sessions.js) for routing
-// app.use('/sessions', sessionsController)
+app.use('/sessions', sessionsController)
 // Allows us to use the users controller file(users.js) for routing
 app.use('/users', usersController)
 
@@ -63,7 +70,12 @@ app.use('/users', usersController)
 //_______________________
 // Home Page
 app.get('/', (req,res) => {
-    res.render('home.ejs');
+    res.render(
+        'home.ejs',
+        {
+            username: req.session.username
+        }
+    );
 })
 
 //_______________________

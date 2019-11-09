@@ -5,11 +5,13 @@
         <title>New User Page</title>
     </head>
     <body>
+        <% include ../partials/nav.ejs %>
         <h1>New User Page</h1>
         <form action="/users" method="post">
             Username: <input type="text" name="username"><br>
-            Password: <input type="text" name="password"><br>
+            Password: <input type="password" name="password"><br>
             <input type="submit" value="Create New User">
         </form>
+        <% include ../partials/footer.ejs %>
     </body>
 </html>

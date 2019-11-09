@@ -5,6 +5,7 @@
         <title>New Recipe Page</title>
     </head>
     <body>
+        <% include ../partials/nav.ejs %>
         <h1>New Recipe Page</h1>
         <form action="/recipes" method="post">
             Name: <input type="text" name="name"><br>
@@ -12,5 +13,6 @@
             <input type="submit" value="Create New Recipe"><br>
         </form>
         <a href="/recipes">Back to Recipes</a>
+        <% include ../partials/footer.ejs %>
     </body>
 </html>

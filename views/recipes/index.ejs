@@ -5,7 +5,10 @@
         <title>Recipe Index Page</title>
     </head>
     <body>
-        <h1>Recipe Index Page</h1>
+        <% include ../partials/nav.ejs %>
+        <div class="container-fluid d-flex justify-content-end align-items-center" id="heroImg2">
+            <h1 id="heroText2">Try Some<br>Of Our<br>Recipes</h1>
+        </div>
         <ul>
             <% for(i = 0; i < recipes.length; i++){%>
                 <li>
@@ -13,6 +16,6 @@
                 </li>
             <%}%>
         </ul>
-        <a href="/recipes/new">Create a New Recipe</a>
+        <% include ../partials/footer.ejs %>
     </body>
 </html>

@@ -9,7 +9,12 @@ const Recipes = require('../models/recipes.js')
 
 // New Recipe Route
 router.get('/new', (req,res) => {
-    res.render('recipes/new.ejs')
+    res.render(
+        'recipes/new.ejs',
+        {
+            username: req.session.username
+        }
+    )
 })
 
 // Recipe Index Page
@@ -18,7 +23,8 @@ router.get('/', (req,res) => {
         res.render(
             'recipes/index.ejs',
             {
-                recipes: allRecipes
+                recipes: allRecipes,
+                username: req.session.username
             }
         );
     })
@@ -30,7 +36,8 @@ router.get('/:id', (req,res) => {
         res.render(
             'recipes/show.ejs',
             {
-                recipe: foundRecipe
+                recipe: foundRecipe,
+                username: req.session.username
             }
         )
     })
@@ -49,7 +56,8 @@ router.get('/:id/edit', (req,res) => {
         res.render(
             'recipes/edit.ejs',
             {
-                recipe: editedRecipe
+                recipe: editedRecipe,
+                username: req.session.username
             }
         )
     })

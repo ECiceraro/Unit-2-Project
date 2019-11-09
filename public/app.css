@@ -1,3 +1,50 @@
 li {
     list-style-type: none;
 }
+
+#navLinks {
+    color: #28a745;
+}
+
+#navbar {
+    background-color: white;
+    border-bottom: 1px solid #d9dbdd;
+}
+
+#navName {
+    margin-right: 10px;
+}
+
+#heroImg {
+    padding: 0;
+    margin: 0;
+    background-image: url(/images/ingredients.jpg);
+    background-size: cover;
+    height: 50vw;
+}
+
+#heroImg2 {
+    padding: 0;
+    margin: 0;
+    background-image: url(/images/recipes.jpg);
+    background-size: cover;
+    height: 50vw;
+}
+
+#heroText {
+    color: white;
+    font-size: 80px;
+    margin-left: 170px;
+    text-shadow: 2px 2px 7px #111111;
+}
+
+#heroText2 {
+    color: white;
+    font-size: 80px;
+    margin-right: 30px;
+    text-shadow: 2px 2px 7px #111111;
+}
+
+#footerText {
+    color: #28a745;
+}
