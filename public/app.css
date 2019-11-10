@@ -29,6 +29,15 @@ li {
     background-image: url(/images/recipes.jpg);
     background-size: cover;
     height: 50vw;
+    margin-bottom: 50px;
+}
+
+#heroImg3 {
+    padding: 0;
+    margin: 0;
+    background-image: url(/images/cook.jpg);
+    background-size: cover;
+    height: 50vw;
 }
 
 #heroText {
@@ -45,6 +54,136 @@ li {
     text-shadow: 2px 2px 7px #111111;
 }
 
+#heroText3 {
+    color: white;
+    font-size: 80px;
+    margin-right: 30px;
+    text-shadow: 2px 2px 7px #111111;
+    margin-bottom: 80px;
+}
+
+#footer {
+    background-color: white;
+    border-top: 1px solid #d9dbdd;
+    height: 70px;
+}
+
 #footerText {
     color: #28a745;
+}
+
+#form {
+    width: 50%;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid #28a745;
+}
+
+#leg {
+    text-align: center;
+    color: #28a745;
+    font-size: 50px;
+}
+
+fieldset {
+  border: 2px solid #28a745;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+label {
+    color: #28a745;
+}
+
+input, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #28a745;
+}
+
+input:focus, textarea:focus {
+  outline: 0;
+  border: 3px solid #28a745;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+textarea:focus {
+    outline: 0;
+    border: 3px solid #28a745;
+}
+
+input[type="submit"] {
+    color: #28a745;
+}
+
+input[type="submit"]:hover {
+  color: black;
+  cursor: pointer;
+  background: #28a745;
+  box-shadow: 2px 2px black;
+}
+
+.recipeImg {
+    height: 25vw;
+    width: 30vw;
+}
+
+#indexContainer {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.divs1 {
+    height: 33vw;
+    width: 30vw;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: box-shadow .5s;
+    margin: 10px;
+}
+
+.divs1:hover {
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+#showWrapper {
+    text-align: center;
+    width: 70vw;
+}
+
+#showImg {
+    margin-bottom: 30px;
+}
+
+#showDelBtn {
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#editImg {
+    margin-top: 30px;
+}
+
+#editTitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#filler {
+    height: 15vw;
+    width: 50vw;
+    background-color: white;
 }

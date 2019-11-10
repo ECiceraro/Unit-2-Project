@@ -6,12 +6,19 @@
     </head>
     <body>
         <% include ../partials/nav.ejs %>
-        <h1>New User Page</h1>
-        <form action="/users" method="post">
-            Username: <input type="text" name="username"><br>
-            Password: <input type="password" name="password"><br>
-            <input type="submit" value="Create New User">
-        </form>
+            <div class="container container-fluid d-flex justify-content-center align-items-center" id="form">
+            <form action="/users" method="post">
+            <fieldset>
+                <legend id="leg">New User Profile</legend>
+                    <label for="username">Username:</label><br><input type="text" name="username"><br>
+                    <label for="password">Password:</label><br><input type="password" name="password"><br><br>
+                    <input type="submit" value="Create New User">
+                </fieldset>
+            </form>
+            </div>
+            <div id="filler">
+
+            </div>
         <% include ../partials/footer.ejs %>
     </body>
 </html>

@@ -6,14 +6,31 @@
     </head>
     <body>
         <% include ../partials/nav.ejs %>
-        <h1>Recipe Show Page</h1><br>
-        Recipe Name: <%=recipe.name%><br>
-        Entry: <%=recipe.entry%><br>
-        <form action="/recipes/<%=recipe.id%>?_method=DELETE" method="post">
+        <div id="showWrapper" class="container-fluid">
+            <h1><%=recipe.name%></h1>
+            <h6><%=recipe.sides%></h6><br>
+            <img id="showImg" src="<%=recipe.img%>" alt="">
+
+            <h2>Ingredients</h2><br>
+            <p><%=recipe.ingredients%></p><br>
+            <h2>Cooking Instructions</h2><br>
+            <h6>Step 1</h6><br>
+            <p><%=recipe.cooking1%></p><br>
+            <h6>Step 2</h6><br>
+            <p><%=recipe.cooking2%></p><br>
+            <h6>Step 3</h6><br>
+            <p><%=recipe.cooking3%></p><br>
+            <h6>Step 4</h6><br>
+            <p><%=recipe.cooking4%></p><br>
+            <h6>Step 5</h6><br>
+            <p><%=recipe.cooking5%></p><br>
+
+
+        <a id="navLinks" href="/recipes/<%=recipe.id%>/edit">Edit Recipe</a><br><br>
+        <form id="showDelBtn" action="/recipes/<%=recipe.id%>?_method=DELETE" method="post">
             <input type="submit" value="Delete Recipe">
-        </form>
-        <a href="/recipes/<%=recipe.id%>/edit">Edit Recipe</a><br>
-        <a href="/recipes">Back to Recipes</a>
+        </form><br>
+        </div>
         <% include ../partials/footer.ejs %>
     </body>
 </html>

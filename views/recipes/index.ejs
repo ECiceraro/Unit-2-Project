@@ -10,11 +10,18 @@
             <h1 id="heroText2">Try Some<br>Of Our<br>Recipes</h1>
         </div>
         <ul>
+            <div id="indexContainer" class="container-fluid d-flex">
             <% for(i = 0; i < recipes.length; i++){%>
-                <li>
-                    Recipe Name: <a href="/recipes/<%=recipes[i].id%>"><%=recipes[i].name%></a>
-                </li>
+                <div class="divs1">
+                    <li>
+                    <a href="/recipes/<%=recipes[i].id%>">
+                        <img class="recipeImg" src="<%=recipes[i].img%>" alt=""></a><br><br>
+                        <h5><%=recipes[i].name%></h5>
+                        <h6><%=recipes[i].sides%></h6>
+                    </li>
+                </div>
             <%}%>
+            </div>
         </ul>
         <% include ../partials/footer.ejs %>
     </body>

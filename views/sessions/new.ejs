@@ -6,12 +6,17 @@
     </head>
     <body>
         <% include ../partials/nav.ejs %>
-        <h1>Log In</h1>
+        <div class="container container-fluid d-flex justify-content-center align-items-center" id="form">
         <form action="/sessions" method="post">
-            Username: <input type="text" name="username"><br>
-            Password: <input type="password" name="password"><br>
+            <legend id="leg">User Login</legend>
+            <label for="username">Username:</label><br><input type="text" name="username"><br>
+            <label for="password">Password:</label><br><input type="password" name="password"><br><br>
             <input type="submit" value="Log In">
         </form>
+        </div>
+        <div id="filler">
+            
+        </div>
         <% include ../partials/footer.ejs %>
     </body>
 </html>

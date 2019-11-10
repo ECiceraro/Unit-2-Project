@@ -6,13 +6,31 @@
     </head>
     <body>
         <% include ../partials/nav.ejs %>
-        <h1>Edit Recipe Page</h1>
+            <h1 id="editTitle"><%=recipe.name%></h1><br>
+        <div class="container-fluid d-flex justify-content-center">
+
+            <img id="editImg" src="<%=recipe.img%>" alt="">
+        </div>
+
+        <div class="container container-fluid d-flex justify-content-center align-items-center" id="form">
+
         <form action="/recipes/<%=recipe.id%>?_method=PUT" method="post">
-            Recipe Name: <input type="text" name="name" value="<%=recipe.name%>"><br>
-            Entry: <input type="text" name="entry" value="<%=recipe.entry%>"><br>
+            <fieldset>
+                <legend id="leg">Edit Recipe</legend>
+
+                <label for="name">Name of Recipe:</label><br><input type="text" name="name" value="<%=recipe.name%>"><br>
+                <label for="sides">Sides:</label><br><input type="text" name="sides" value="<%=recipe.sides%>"><br>
+                <label for="img">Image Url:</label><br><input type="text" name="img" value="<%=recipe.img%>"><br>
+                <label for="ingredients">Ingredients:</label><br><textarea name="ingredients" rows="8" cols="80"><%=recipe.ingredients%></textarea><br>
+                <label for="cooking1">Cooking Instructions Step 1:</label><br><textarea name="cooking1" rows="8" cols="80"><%=recipe.cooking1%></textarea><br>
+                <label for="cooking2">Cooking Instructions Step 2:</label><br><textarea name="cooking2" rows="8" cols="80"><%=recipe.cooking2%></textarea><br>
+                <label for="cooking3">Cooking Instructions Step 3:</label><br><textarea name="cooking3" rows="8" cols="80"><%=recipe.cooking3%></textarea><br>
+                <label for="cooking4">Cooking Instructions Step 4:</label><br><textarea name="cooking4" rows="8" cols="80"><%=recipe.cooking4%></textarea><br>
+                <label for="cooking5">Cooking Instructions Step 5:</label><br><textarea name="cooking5" rows="8" cols="80"><%=recipe.cooking5%></textarea><br>
             <input type="submit" value="Edit Recipe">
+            </fieldset><br>
         </form>
-        <a href="/recipes">Back to Recipes</a>
+        </div>
         <% include ../partials/footer.ejs %>
     </body>
 </html>
