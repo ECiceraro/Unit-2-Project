@@ -8,7 +8,7 @@ router.get('/new', (req,res) => {
     res.render(
         'sessions/new.ejs',
         {
-            username: req.session.username
+            username: req.session.username,
         }
     )
 })
@@ -22,6 +22,7 @@ router.post('/', (req,res) => {
             const doesPasswordMatch = bcrypt.compareSync(req.body.password, foundUser.password);
             if (doesPasswordMatch){
                 req.session.username = foundUser.username;
+                req.session.userId = foundUser.id;
                 res.redirect('/recipes')
             } else {
                 res.redirect('/sessions/new');

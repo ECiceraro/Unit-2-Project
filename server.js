@@ -11,6 +11,9 @@ const session            = require('express-session');
 const recipesController  = require('./controllers/recipes.js');
 const sessionsController = require('./controllers/sessions.js');
 const usersController    = require('./controllers/users.js');
+const savedController    = require('./controllers/saved.js');
+
+// Allows us to use the env file to keep sensitive information secure
 require('dotenv').config();
 
 //_______________________
@@ -60,10 +63,8 @@ app.use('/recipes', recipesController)
 app.use('/sessions', sessionsController)
 // Allows us to use the users controller file(users.js) for routing
 app.use('/users', usersController)
-
-
-
-
+// Allows us to use the saved controller file(saved.js) for routing
+app.use('/saved', savedController)
 
 //_______________________
 //Routes

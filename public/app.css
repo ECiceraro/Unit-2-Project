@@ -40,6 +40,14 @@ li {
     height: 50vw;
 }
 
+#heroImg4 {
+    padding: 0;
+    margin: 0;
+    background-image: url(/images/saved.jpg);
+    background-size: cover;
+    height: 50vw;
+}
+
 #heroText {
     color: white;
     font-size: 80px;
@@ -60,6 +68,13 @@ li {
     margin-right: 30px;
     text-shadow: 2px 2px 7px #111111;
     margin-bottom: 80px;
+}
+
+#heroText4 {
+    color: white;
+    font-size: 80px;
+    margin-left: 80px;
+    text-shadow: 2px 2px 7px #111111;
 }
 
 #footer {
@@ -168,6 +183,12 @@ input[type="submit"]:hover {
 }
 
 #showDelBtn {
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#showSaveBtn {
     width: 150px;
     margin: 0 auto;
     text-align: center;

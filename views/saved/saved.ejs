@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <% include ../partials/head.ejs %>
+        <title>Saved Recipes</title>
+    </head>
+    <body>
+        <% include ../partials/nav.ejs %>
+        <div class="container-fluid d-flex justify-content-start align-items-center" id="heroImg4">
+            <h1 id="heroText4"><%=username%>'s<br> Favorite Recipes</h1>
+        </div>
+        <ul>
+            <div id="indexContainer" class="container-fluid d-flex">
+            <% for(let i = 0; i < savedRecipes.length; i++){%>
+                <div class="divs1">
+                    <li>
+                    <a href="/saved/<%=i%>/show">
+                        <img class="recipeImg" src="<%=savedRecipes[i].img%>" alt=""></a><br><br>
+                        <h5><%=savedRecipes[i].name%></h5>
+                        <h6><%=savedRecipes[i].sides%></h6>
+                    </li>
+                </div>
+            <%}%>
+            </div>
+        </ul>
+        <% include ../partials/footer.ejs %>
+    </body>
+</html>

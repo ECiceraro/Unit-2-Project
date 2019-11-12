@@ -25,10 +25,27 @@
             <h6>Step 5</h6><br>
             <p><%=recipe.cooking5%></p><br>
 
-
+            <% if(username === 'Erik'){%>
         <a id="navLinks" href="/recipes/<%=recipe.id%>/edit">Edit Recipe</a><br><br>
+        <%} else{}%>
+        <form id="showSaveBtn" action="/saved/?_method=PATCH" method="post">
+            <input type="hidden" name="name" value="<%=recipe.name%>">
+            <input type="hidden" name="sides" value="<%=recipe.sides%>">
+            <input type="hidden" name="img" value="<%=recipe.img%>">
+            <input type="hidden" name="ingredients" value="<%=recipe.ingredients%>">
+            <input type="hidden" name="cooking1" value="<%=recipe.cooking1%>">
+            <input type="hidden" name="cooking2" value="<%=recipe.cooking2%>">
+            <input type="hidden" name="cooking3" value="<%=recipe.cooking3%>">
+            <input type="hidden" name="cooking4" value="<%=recipe.cooking4%>">
+            <input type="hidden" name="cooking5" value="<%=recipe.cooking5%>">
+            <% if(username){%>
+            <input type="submit" value="Save Recipe">
+            <%} else{}%>
+        </form><br>
         <form id="showDelBtn" action="/recipes/<%=recipe.id%>?_method=DELETE" method="post">
+            <% if(username === 'Erik'){ %>
             <input type="submit" value="Delete Recipe">
+            <%}%>
         </form><br>
         </div>
         <% include ../partials/footer.ejs %>

@@ -3,9 +3,11 @@
         <div class="nav-item">
             <a href="/recipes"><img src="/images/logo.svg" alt="logo"></a>
         </div>
+        <% if(username){ %>
         <div class="nav-item">
-            <a class="nav-link" id="navLinks" href="#">Your Recipes</a>
+            <a class="nav-link" id="navLinks" href="/saved">Your Recipes</a>
         </div>
+        <% } else{} %>
         <div class="nav-item mr-auto">
             <a class="nav-link" id="navLinks" href="/recipes/new">Create Recipe</a>
         </div>
