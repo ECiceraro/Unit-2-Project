@@ -55,4 +55,4 @@ This app is not licensed for any use outside the demonstration of what I am capa
 ## Acknowledgements
 
   * Thank you to my homework group for support.
-  * Special thanks to Dan for helping see it through the night before deployment with bug hunting a few weird bugs.  
+  * Special thanks to Meredith and Dan for helping see it through the night before deployment with bug hunting a few weird bugs.  
